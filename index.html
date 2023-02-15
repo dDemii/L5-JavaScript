@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luces-JavaScript Functions</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+			background-color: #f2f2f2;
+		}
+
+		h1 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color: black;
+		}
+
+		button {
+			padding: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+
+		input {
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+		}
+
+		.output {
+			margin-top: 10px;
+			padding: 15px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="task1">TASK 1-Dimmie E. Luces</h1>
+	<button onclick="changeTextColor()">Change Text Color to Green</button>
+
+	<h1 id="task2">TASK 2</h1>
+	<label for="age">Enter your age:</label>
+	<input type="number" id="age" name="age">
+	<button onclick="checkAge()">Check Age</button>
+
+	<h1 id="task3">TASK 3</h1>
+	<label for="num1">Enter the first number:</label>
+	<input type="number" id="num1" name="num1">
+	<label for="num2">Enter the second number:</label>
+	<input type="number" id="num2" name="num2">
+	<br>
+	<button onclick="add()">Add</button>
+	<button onclick="subtract()">Subtract</button>
+	<button onclick="multiply()">Multiply</button>
+	<button onclick="divide()">Divide</button>
+	<div class="output" id="output"></div>
+
+	<script>
+	function changeTextColor() {
+        const task1 = document.getElementById("task1");
+        const color = task1.style.color;
+        if (color === "black") {
+          task1.style.color = "green";
+        } else {
+          task1.style.color = "black";
+        }
+      }
+
+		function checkAge() {
+			var age = document.getElementById("age").value;
+			if (age > 65) {
+				alert("True");
+			} else {
+				alert("False");
+			}
+		}
+
+		function add() {
+			var num1 = Number(document.getElementById("num1").value);
+			var num2 = Number(document.getElementById("num2").value);
+			document.getElementById("output").innerHTML = "Result: " + (num1 + num2);
+		}
+
+		function subtract() {
+			var num1 = Number(document.getElementById("num1").value);
+			var num2 = Number(document.getElementById("num2").value);
+			document.getElementById("output").innerHTML = "Result: " + (num1 - num2);
+		}
+
+		function multiply() {
+			var num1 = Number(document.getElementById("num1").value);
+			var num2 = Number(document.getElementById("num2").value);
+			document.getElementById("output").innerHTML = "Result: " + (num1 * num2);
+		}
+
+		function divide() {
+			var num1 = Number(document.getElementById("num1").value);
+			var num2 = Number(document.getElementById("num2").value);
+			document.getElementById("output").innerHTML = "Result: " + (num1 / num2);
+		}
+	</script>
+</body>
+</html>
